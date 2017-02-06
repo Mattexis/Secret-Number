@@ -1,0 +1,31 @@
+Variables
+
+NbSecret = entier long
+proposition = entier long
+coupsrestant = entier
+
+Début 
+
+NbSecret = Nombre choisi aléatoirement par la machine
+Lire NbSecret
+Coupsrestant = 15
+TantQue coupsrestant > 0
+	Ecrire « Entrez votre proposition : »
+	Lire proposition
+	Si proposition > NbSecret
+		Ecrire « Le nombre est plus petit »
+		Coupsrestant  coupsrestant -= 1
+	SinonSi proposition < NbSecret 
+		Ecrire « Le nombre est plus grand »
+		Coupsrestant  coupsrestant -= 1
+	Sinon
+		Ecrire « Vous avez trouvé le bon nombre. Félicitation ! »
+		Coupsrestant = 0
+Si coupsrestant == 0 et proposition != NbSecret
+	Ecrire « Vous avez dépassé le nombre de coups disponible. »
+
+Fin Si
+Fin Si
+Fin TantQue
+
+Fin
