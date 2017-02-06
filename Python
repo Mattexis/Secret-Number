@@ -1,0 +1,16 @@
+from random import*
+NbSecret = randint(1,10000)
+coupsrestant = 15
+while coupsrestant > 0:
+    proposition = int(input("Entrez votre proposition : "))
+    if proposition > NbSecret:
+        print("Le nombre est plus petit")
+        coupsrestant -=1
+    elif proposition < NbSecret:
+        print("Le nombre est plus grand")
+        coupsrestant -=1
+    else:
+        print("Vous avez trouvé le bon nombre. Félicitation !")
+        coupsrestant = 0
+if coupsrestant == 0 and proposition != NbSecret:
+    print("Vous avez dépassé le nombre de coups disponible.")
